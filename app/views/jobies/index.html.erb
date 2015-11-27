@@ -1,0 +1,31 @@
+<h1>Listing jobies</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Occupation</th>
+      <th>Name</th>
+      <th>Lastname</th>
+      <th>Phone</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @jobies.each do |joby| %>
+      <tr>
+        <td><%= joby.occupation %></td>
+        <td><%= joby.name %></td>
+        <td><%= joby.lastname %></td>
+        <td><%= joby.phone %></td>
+        <td><%= link_to 'Show', joby %></td>
+        <td><%= link_to 'Edit', edit_joby_path(joby) %></td>
+        <td><%= link_to 'Destroy', joby, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Joby', new_joby_path %>

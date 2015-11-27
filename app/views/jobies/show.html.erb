@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Occupation:</strong>
+  <%= @joby.occupation %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @joby.name %>
+</p>
+
+<p>
+  <strong>Lastname:</strong>
+  <%= @joby.lastname %>
+</p>
+
+<p>
+  <strong>Phone:</strong>
+  <%= @joby.phone %>
+</p>
+
+<%= link_to 'Edit', edit_joby_path(@joby) %> |
+<%= link_to 'Back', jobies_path %>
